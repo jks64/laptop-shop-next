@@ -1,0 +1,16 @@
+export const laptopBrands = [
+  'Dell',
+  'HP',
+  'Lenovo',
+  'Asus',
+  'Acer',
+  'Apple',
+  'Microsoft',
+  'Sony',
+  'Toshiba',
+  'Samsung',
+  'MSI',
+  'LG',
+  'Fujitsu',
+  'Alienware',
+];

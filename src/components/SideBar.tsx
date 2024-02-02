@@ -57,37 +57,39 @@ function SideBar() {
   const filteredBrands = laptopBrands.filter((brand) => brandCounts[brand] > 0);
 
   return (
-    <div className="flex flex-row justify-center items-center p-4 bg-gray-100 rounded-lg shadow-md space-x-4">
-      <div className="flex flex-col items-center ">
-        <label htmlFor="sortSelector" className="font-semibold">
-          Сортування
-        </label>
-        <select
-          className="bg-white border border-gray-300 rounded-md text-gray-700 h-10 pl-3 pr-6 text-base focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-          id="sortSelector"
-          name="sortOrder"
-          value={sortValue}
-          onChange={handleSortChange}
-        >
-          <option value="to-up">Від дешевих до дорогих</option>
-          <option value="to-down">Від дорогих до дешевих</option>
-        </select>
-      </div>
-      <div className="flex flex-col items-center ">
-        <label htmlFor="findSelector" className="font-semibold">
-          Пошук
-        </label>
-        <input
-          className=" bg-white border border-gray-300 rounded-md text-gray-700 h-10 pl-3 pr-6 text-base focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-          placeholder="Поиск"
-          id="findSelector"
-          type="text"
-          value={findValue}
-          onChange={handleInputChange}
-        />
-      </div>
-      <div className="flex flex-col absolute left-5 top-[120%]">
-        <label className="font-semibold mb-2">Производитель</label>
+    <div className="flex flex-col justify-center mr-7 items-center p-4 bg-gray-100 rounded-lg shadow-md space-x-4">
+      <div className="flex flex-col items-center gap-3">
+        <div className="flex flex-col items-center justify-center">
+          <label htmlFor="sortSelector" className="font-semibold">
+            Сортування
+          </label>
+          <select
+            className="bg-white border border-gray-300 rounded-md text-gray-700 h-10 pl-3 pr-6 text-base focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            id="sortSelector"
+            name="sortOrder"
+            value={sortValue}
+            onChange={handleSortChange}
+          >
+            <option value="to-up">Від дешевих до дорогих</option>
+            <option value="to-down">Від дорогих до дешевих</option>
+          </select>
+        </div>
+        <div className="flex flex-col items-center ">
+          <label htmlFor="findSelector" className="font-semibold">
+            Пошук
+          </label>
+          <input
+            className=" bg-white border border-gray-300 rounded-md text-gray-700 h-10 pl-3 pr-6 text-base focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            placeholder="Поиск"
+            id="findSelector"
+            type="text"
+            value={findValue}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="flex flex-col ">
+          <label className="font-semibold mt-1">Производитель</label>
+        </div>
 
         <FormControl className="bg-white border border-gray-300 rounded-md text-gray-700">
           <FormGroup className="bg-gray-100 w-48 p-4 border border-gray-300 rounded-md text-gray-700 text-xl">

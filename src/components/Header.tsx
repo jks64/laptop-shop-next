@@ -17,12 +17,13 @@ const Header = () => {
       <nav className="flex flex-row justify-between items-center">
         <Link href={'/'}>
           <div className="p-2 pl-5 pt-4">
-            <Image
+            <img
               alt="laptop"
               width={300}
               height={300}
-              objectFit="contain"
-              src={'/9a3eb036-507d-4e46-83ce-330a91643d64_50.png'}
+              src={
+                'https://i.ibb.co/6WK1ysf/9a3eb036-507d-4e46-83ce-330a91643d64-50.webp'
+              }
             />
           </div>
         </Link>

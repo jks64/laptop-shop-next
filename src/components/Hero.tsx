@@ -33,12 +33,11 @@ const Hero = () => {
         </div>
 
         <div>
-          <Image
-            src={'/laptops-for-hero.png'}
+          <img
+            src={'https://i.ibb.co/gJ6K7Mr/laptops-for-hero.png'}
             alt="laptop"
             width={850}
             height={500}
-            objectFit="contain"
           />
         </div>
       </div>

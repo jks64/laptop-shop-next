@@ -8,6 +8,12 @@
   .bg-custom-green {
     background-color: #5cb85c;
   }
+  .bg-add-to-card {
+    background-color: #3498ca;
+  }
+  .bg-buy-now-card {
+    background-color: #0053a0;
+  }
   .horizontal-line-height {
     height: 1px;
   }
@@ -22,5 +28,13 @@
   .flex-wrap > * {
     flex: 1 0 calc(33.33% - 8px); /* Расчет ширины элемента с учетом отступов между ними (8px) */
     margin-bottom: 8px; /* Отступ между рядами */
+  }
+  .product-page__prev-photo__btn {
+    position: absolute;
+    border-radius: 50px;
+    padding: 4px;
+    top: 46%;
+    right: 84%;
+    transform: scaleX(-1);
   }
 }

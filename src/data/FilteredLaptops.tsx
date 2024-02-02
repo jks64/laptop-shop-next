@@ -11,7 +11,7 @@ import axios from 'axios';
 import { links } from '../../links/PROD-URLS';
 import useSWR from 'swr';
 
-const fetcher = (url) => axios.get(url).then((res) => res.data);
+const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
 function FilteredLaptopsComponent() {
   const [findLaptops, setFindLaptops] = useState([]);
@@ -33,7 +33,7 @@ function FilteredLaptopsComponent() {
     if (!data) {
       return;
     }
-
+    console.log(data);
     const productListWithImages = data.map((product) => {
       if (typeof product === 'object' && product.hasOwnProperty('images')) {
         const productWithImages = { ...product };
@@ -53,7 +53,6 @@ function FilteredLaptopsComponent() {
 
   useEffect(() => {
     if (!loading) {
-      console.log(laptopsState);
       let filteredLaptops = laptopsState
         .filter((laptop) =>
           laptop.title.toLowerCase().includes(findValue.toLowerCase())
@@ -75,7 +74,6 @@ function FilteredLaptopsComponent() {
       }
 
       setFindLaptops(filteredLaptops);
-      console.log('filteredLaptops', filteredLaptops);
     }
   }, [findValue, laptopsState, sortValue, selectedBrands]);
 

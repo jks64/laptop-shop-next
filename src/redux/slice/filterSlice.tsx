@@ -18,9 +18,7 @@ const filterSlice = createSlice({
     },
     updateBrandValue: (state, action: PayloadAction<>) => {
       const eventTarget = action.payload;
-      console.log('eventTarget', eventTarget);
-      console.log('eventTarget.value', eventTarget.value);
-      console.log('eventTarget.checker', eventTarget.checked);
+  
       const newSelectedBrands = eventTarget.checked
         ? [...state.selectedBrands, eventTarget.value]
         : state.selectedBrands.filter((brand) => brand !== eventTarget.value);
